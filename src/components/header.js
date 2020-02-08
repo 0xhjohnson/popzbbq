@@ -85,8 +85,7 @@ const Header = ({ menuLinks }) => {
                   to={link.link}
                   activeStyle={{ color: 'white' }}
                   sx={{
-                    textDecoration: 'none',
-                    variant: 'styles.link'
+                    variant: 'styles.headerLink'
                   }}>
                   {link.name}
                 </Link>

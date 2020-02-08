@@ -7,12 +7,36 @@ export default {
     header: {
       py: 1
     },
-    link: {
+    headerLink: {
       px: [1, 2],
       color: 'gray.4',
+      textDecoration: 'none',
       transition: 'all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000)',
       '&:hover': {
         color: 'gray.2'
+      }
+    },
+    footerListItem: {
+      listStyleType: 'none',
+      color: 'gray.7',
+      fontSize: 0,
+      pb: 1
+    },
+    footerLink: {
+      color: 'gray.7',
+      textDecoration: 'none',
+      transition: 'all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000)',
+      '&:hover': {
+        color: 'gray.6'
+      }
+    },
+    footerIcons: {
+      color: 'gray.7',
+      fontSize: 2,
+      mr: 3,
+      transition: 'all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000)',
+      '&:hover': {
+        color: 'gray.6'
       }
     }
   },
