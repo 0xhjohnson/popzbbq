@@ -23,7 +23,7 @@ const Footer = ({ menuLinks }) => {
 
   return (
     <footer sx={{ bg: 'gray.2', height: 48, display: 'flex' }}>
-      <div sx={{ p: 4, mr: 'auto' }}>
+      <div sx={{ p: [null, 3], mr: 'auto' }}>
         <Img
           fixed={data.placeholderImage.childImageSharp.fixed}
           alt="Pop'z BBQ logo footer"
@@ -32,7 +32,7 @@ const Footer = ({ menuLinks }) => {
           © {new Date().getFullYear()}, POPZ BBQ & CATERING LLC
         </p>
       </div>
-      <div sx={{ m: 0, mx: [0, 0, 2, 3], py: 3, px: 4 }}>
+      <div sx={{ variant: 'styles.footerBlock' }}>
         <p
           sx={{
             m: 0,
@@ -86,7 +86,7 @@ const Footer = ({ menuLinks }) => {
           </li>
         </ul>
       </div>
-      <div sx={{ m: 0, mx: [0, 0, 2, 3], py: 3, px: 4 }}>
+      <div sx={{ variant: 'styles.footerBlock' }}>
         <p
           sx={{
             m: 0,
@@ -131,18 +131,18 @@ const Footer = ({ menuLinks }) => {
           </li>
         </ul>
       </div>
-      <div sx={{ m: 0, mx: [0, 0, 2, 3], p: 3 }}>
+      <div sx={{ variant: 'styles.footerBlock' }}>
         <p
           sx={{
             m: 0,
-            mb: 3,
+            mb: 2,
             color: 'gray.7',
             fontWeight: 'semibold',
             fontSize: 0
           }}>
           Socials
         </p>
-        <div sx={{ display: 'flex' }}>
+        <div sx={{ display: 'flex', marginLeft: '-0.5rem' }}>
           <a
             sx={{ variant: 'styles.footerLink' }}
             href="https://www.facebook.com/pg/PopzBBQ">

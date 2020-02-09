@@ -63,13 +63,13 @@ const Header = ({ menuLinks }) => {
               <li
                 key={link.name}
                 sx={{
-                  p: [1, 2],
+                  px: [null, 1, 2],
                   listStyleType: 'none',
                   '&:last-child': {
                     py: 1,
                     px: 2,
                     my: 'auto',
-                    ml: [2, 3, 4],
+                    ml: [null, 1, 2, 4],
                     cursor: 'pointer',
                     fontSize: 0,
                     bg: 'gray.8',
@@ -77,7 +77,9 @@ const Header = ({ menuLinks }) => {
                     borderRadius: 'default',
                     maxHeight: '35px',
                     '&:hover': {
-                      bg: 'gray.7'
+                      bg: 'gray.7',
+                      transition:
+                        'all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000)'
                     }
                   }
                 }}>

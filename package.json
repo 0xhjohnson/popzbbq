@@ -6,6 +6,7 @@
   "author": "0xhjohnson <0xhjohnson@protonmail.com>",
   "dependencies": {
     "@theme-ui/presets": "^0.3.0",
+    "@theme-ui/typography": "^0.3.0",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
@@ -21,7 +22,10 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.9.0",
-    "theme-ui": "^0.3.1"
+    "theme-ui": "^0.3.1",
+    "typeface-merriweather": "^0.0.72",
+    "typeface-source-sans-pro": "^0.0.75",
+    "typography-theme-us-web-design-standards": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
