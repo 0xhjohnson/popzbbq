@@ -1,4 +1,5 @@
 import React from 'react';
+import { Heading } from 'theme-ui';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -6,7 +7,7 @@ import SEO from '../components/seo';
 const BookEvent = () => (
   <Layout>
     <SEO title="Book an event" />
-    <h1>Book an Event</h1>
+    <Heading as="h1">Book an Event</Heading>
   </Layout>
 );
 

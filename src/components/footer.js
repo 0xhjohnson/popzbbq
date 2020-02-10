@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import { jsx, Box, Text, Flex } from 'theme-ui';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { FaYelp, FaFacebookF } from 'react-icons/fa';
 import { find, propEq } from 'ramda';
@@ -23,27 +23,18 @@ const Footer = ({ menuLinks }) => {
 
   return (
     <footer sx={{ bg: 'gray.2', height: 48, display: 'flex' }}>
-      <div sx={{ p: [null, 3], mr: 'auto' }}>
+      <Box p={3} mr="auto">
         <Img
           fixed={data.placeholderImage.childImageSharp.fixed}
           alt="Pop'z BBQ logo footer"
         />
-        <p sx={{ fontSize: 0, color: 'gray.7' }}>
+        <Text sx={{ fontSize: 0, color: 'gray.7', my: 1 }}>
           © {new Date().getFullYear()}, POPZ BBQ & CATERING LLC
-        </p>
-      </div>
-      <div sx={{ variant: 'styles.footerBlock' }}>
-        <p
-          sx={{
-            m: 0,
-            mb: 2,
-            color: 'gray.7',
-            fontWeight: 'semibold',
-            fontSize: 0
-          }}>
-          Reviews
-        </p>
-        <ul sx={{ m: 0, p: 0 }}>
+        </Text>
+      </Box>
+      <Box sx={{ variant: 'styles.footerBlock' }}>
+        <Text variant="footerSubheading">Reviews</Text>
+        <ul>
           <li
             sx={{
               variant: 'styles.footerListItem'
@@ -85,19 +76,10 @@ const Footer = ({ menuLinks }) => {
             </a>
           </li>
         </ul>
-      </div>
-      <div sx={{ variant: 'styles.footerBlock' }}>
-        <p
-          sx={{
-            m: 0,
-            mb: 2,
-            color: 'gray.7',
-            fontWeight: 'semibold',
-            fontSize: 0
-          }}>
-          Contact
-        </p>
-        <ul sx={{ m: 0, p: 0 }}>
+      </Box>
+      <Box sx={{ variant: 'styles.footerBlock' }}>
+        <Text variant="footerSubheading">Contact</Text>
+        <ul>
           <li
             key={bookEventLink.name}
             sx={{
@@ -130,19 +112,10 @@ const Footer = ({ menuLinks }) => {
             </a>
           </li>
         </ul>
-      </div>
-      <div sx={{ variant: 'styles.footerBlock' }}>
-        <p
-          sx={{
-            m: 0,
-            mb: 2,
-            color: 'gray.7',
-            fontWeight: 'semibold',
-            fontSize: 0
-          }}>
-          Socials
-        </p>
-        <div sx={{ display: 'flex', marginLeft: '-0.5rem' }}>
+      </Box>
+      <Box sx={{ variant: 'styles.footerBlock' }}>
+        <Text variant="footerSubheading">Socials</Text>
+        <Flex sx={{ marginLeft: '-0.5rem' }}>
           <a
             sx={{ variant: 'styles.footerLink' }}
             href="https://www.facebook.com/pg/PopzBBQ">
@@ -153,8 +126,8 @@ const Footer = ({ menuLinks }) => {
             href="https://www.yelp.com/biz/popz-bbq-and-catering-fort-myers">
             <FaYelp sx={{ variant: 'styles.footerIcons' }} />
           </a>
-        </div>
-      </div>
+        </Flex>
+      </Box>
     </footer>
   );
 };

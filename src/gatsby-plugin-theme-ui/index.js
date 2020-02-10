@@ -3,8 +3,7 @@ import { omit, mergeDeepRight } from 'ramda';
 import { toTheme } from '@theme-ui/typography';
 import usWebDesign from 'typography-theme-us-web-design-standards';
 
-let tw = omit(['fonts', 'styles', 'buttons', 'inputs'], tailwind);
-console.log(usWebDesign);
+const tw = omit(['fonts', 'styles', 'buttons', 'inputs'], tailwind);
 
 const theme = mergeDeepRight(
   {
@@ -13,7 +12,22 @@ const theme = mergeDeepRight(
       body: '"Source Sans Pro", "sans-serif"',
       heading: 'Merriweather, serif'
     },
+    text: {
+      footerSubheading: {
+        m: 0,
+        mb: 2,
+        color: 'gray.7',
+        fontWeight: 'semibold',
+        fontSize: 0
+      }
+    },
     styles: {
+      root: {
+        ul: {
+          m: 0,
+          p: 0
+        }
+      },
       header: {
         py: 1
       },
@@ -24,6 +38,26 @@ const theme = mergeDeepRight(
         transition: 'all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000)',
         '&:hover': {
           color: 'gray.2'
+        }
+      },
+      navItems: {
+        px: [null, 1, 2],
+        listStyleType: 'none',
+        '&:last-child': {
+          py: 1,
+          px: 2,
+          my: 'auto',
+          ml: [null, 1, 2, 4],
+          cursor: 'pointer',
+          fontSize: 0,
+          bg: 'gray.8',
+          fontWeight: 'semibold',
+          borderRadius: 'default',
+          maxHeight: '35px',
+          '&:hover': {
+            bg: 'gray.7',
+            transition: 'all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000)'
+          }
         }
       },
       footerBlock: {
