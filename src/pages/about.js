@@ -19,7 +19,7 @@ const About = () => (
       people with delicious, cooked to order South Georgia style BBQ. Creating a
       reputation for some of the best South Georgia style BBQ. Our menu has
       expanded over the years and now includes a large variety of options
-      ranging from beef brisket to rack of lamb.
+      ranging from slow-cooked pulled pork to custom cut steaks.
     </Text>
     <Text mt={2} mb={3}>
       Pop’z BBQ can take care of all types of events including weddings. Whether
