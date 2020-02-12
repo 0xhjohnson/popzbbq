@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
+import { Container } from 'theme-ui';
 import 'normalize.css';
 
-import Header from './header';
+import Nav from './nav';
 import Footer from './footer';
 
 const Layout = ({ children }) => {
@@ -22,15 +23,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header menuLinks={data.site.siteMetadata.menuLinks} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`
-        }}>
+      <Nav menuLinks={data.site.siteMetadata.menuLinks} />
+      <Container px={4} py={3}>
         <main>{children}</main>
-      </div>
+      </Container>
       <Footer menuLinks={data.site.siteMetadata.menuLinks} />
     </>
   );

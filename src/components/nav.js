@@ -4,7 +4,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
 
-const Header = ({ menuLinks }) => {
+const Nav = ({ menuLinks }) => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "popz-bbq-logo-home.png" }) {
@@ -19,7 +19,6 @@ const Header = ({ menuLinks }) => {
 
   return (
     <Flex
-      as="header"
       px={[null, 2, 3, 4]}
       sx={{
         bg: 'gray.9',
@@ -74,4 +73,4 @@ const Header = ({ menuLinks }) => {
   );
 };
 
-export default Header;
+export default Nav;

@@ -21,6 +21,11 @@ const theme = mergeDeepRight(
         fontSize: 0
       }
     },
+    layout: {
+      container: {
+        maxWidth: '1024px'
+      }
+    },
     styles: {
       root: {
         ul: {
