@@ -23,7 +23,7 @@ const theme = mergeDeepRight(
     },
     layout: {
       container: {
-        maxWidth: '1024px'
+        maxWidth: '1280px'
       }
     },
     styles: {
