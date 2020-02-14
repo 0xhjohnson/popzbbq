@@ -7,7 +7,7 @@ import SEO from '../components/seo';
 const About = () => (
   <Layout>
     <SEO title="About" />
-    <Box mx={[0, null, null, 4, 5]}>
+    <Box mx={[0, null, null, 4, 5]} mt={[0, null, null, 4]}>
       <Heading as="h1" my={2}>
         About
       </Heading>

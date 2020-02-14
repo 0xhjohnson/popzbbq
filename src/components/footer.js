@@ -22,7 +22,7 @@ const Footer = ({ menuLinks }) => {
   const bookEventLink = find(propEq('name', 'Book an Event'))(menuLinks);
 
   return (
-    <footer sx={{ bg: 'gray.2', height: 48, display: 'flex' }}>
+    <footer sx={{ bg: 'gray.2', display: 'flex' }}>
       <Box p={3} mr="auto">
         <Img
           fixed={data.placeholderImage.childImageSharp.fixed}
