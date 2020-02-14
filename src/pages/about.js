@@ -26,10 +26,8 @@ const About = () => (
         Pop’z BBQ can take care of all types of events including weddings.
         Whether your event is for 50 people or 1,500 I always provide the
         highest service possible and ensure everything goes extremely smooth. I
-        provide Pop’z BBQ famous homemade BBQ sauce with every order. Due to
-        customer demand, Pop’z BBQ gladly sells 16 oz. bottles online of the
-        same sauce that you enjoy with every catering event. Each bottle is
-        shipped fast and free and all major credit cards are accepted.
+        provide Pop’z BBQ famous homemade BBQ sauce with every order. The sauce
+        is my grandfather's recipe, passed down generations.
       </Text>
     </Box>
   </Layout>
