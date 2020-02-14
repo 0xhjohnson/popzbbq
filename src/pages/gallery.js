@@ -1,6 +1,7 @@
+/** @jsx jsx */
 import React from 'react';
 import Img from 'gatsby-image';
-import { Heading, Grid } from 'theme-ui';
+import { Heading, Grid, jsx } from 'theme-ui';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/layout';
@@ -51,6 +52,7 @@ const Gallery = () => {
             key={node.id}
             fluid={node.childImageSharp.fluid}
             alt={filenameToTitle(node.childImageSharp.fluid.originalName)}
+            sx={{ borderRadius: 'sm' }}
           />
         ))}
       </Grid>
