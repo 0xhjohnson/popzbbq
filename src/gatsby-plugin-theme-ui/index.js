@@ -26,6 +26,38 @@ const theme = mergeDeepRight(
         maxWidth: '1280px'
       }
     },
+    forms: {
+      label: {
+        fontSize: 1,
+        fontWeight: 'semibold'
+      },
+      input: {
+        borderColor: 'gray.7',
+        p: '8px',
+        transition: 'all 0.3s, height 0s',
+        '&:hover': {
+          borderColor: 'primary'
+        },
+        '&:focus': {
+          borderColor: 'primary',
+          boxShadow: '0 0 0 2px rgba(43, 108, 176, 0.2)',
+          outline: 'none'
+        }
+      },
+      textarea: {
+        borderColor: 'gray.7',
+        p: '8px',
+        transition: 'all 0.3s, height 0s',
+        '&:hover': {
+          borderColor: 'primary'
+        },
+        '&:focus': {
+          borderColor: 'primary',
+          boxShadow: '0 0 0 2px rgba(43, 108, 176, 0.2)',
+          outline: 'none'
+        }
+      }
+    },
     styles: {
       root: {
         ul: {
@@ -95,6 +127,19 @@ const theme = mergeDeepRight(
       }
     },
     buttons: {
+      primary: {
+        color: 'background',
+        bg: 'blue.6',
+        cursor: 'pointer',
+        outline: 0,
+        transition: 'all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1)',
+        '&:hover, &:focus': {
+          bg: 'blue.5'
+        },
+        '&:active': {
+          bg: 'blue.7'
+        }
+      },
       outline: {
         py: 1,
         px: 2,
