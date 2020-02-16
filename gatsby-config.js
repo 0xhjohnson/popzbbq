@@ -24,6 +24,11 @@ module.exports = {
         name: 'Book an Event',
         link: '/book-event'
       }
+    ],
+    menuCategories: [
+      { name: 'Starters' },
+      { name: 'Meats and Seafood' },
+      { name: 'Sides' }
     ]
   },
   plugins: [

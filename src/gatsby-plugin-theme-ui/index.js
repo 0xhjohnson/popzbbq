@@ -1,5 +1,5 @@
 import { tailwind } from '@theme-ui/presets';
-import { omit, mergeDeepRight, reduce } from 'ramda';
+import { omit, mergeDeepRight } from 'ramda';
 import { toTheme } from '@theme-ui/typography';
 import usWebDesign from 'typography-theme-us-web-design-standards';
 
@@ -175,16 +175,36 @@ const theme = mergeDeepRight(
         backgroundColor: 'transparent',
         borderWidth: '1px',
         borderStyle: 'solid',
-        color: 'gray.2',
-        fontWeight: 'bold',
+        color: 'gray.7',
+        fontWeight: 'semibold',
         borderRadius: 'default',
         display: 'flex',
         alignItems: 'center',
         '&:hover': {
-          backgroundColor: 'primary',
-          color: 'white',
-          borderColor: 'transparent'
+          color: 'gray.5',
+          borderColor: 'gray.5'
         }
+      }
+    },
+    minimal: {
+      py: 1,
+      px: 2,
+      cursor: 'pointer',
+      fontSize: 0,
+      lineHeight: 'inherit',
+      fontWeight: 'semibold',
+      backgroundColor: 'transparent',
+      borderRadius: 'default',
+      borderWidth: '1px',
+      borderStyle: 'solid',
+      borderColor: 'transparent',
+      color: 'gray.7',
+      display: 'flex',
+      alignItems: 'center',
+      transition: 'all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000)',
+      '&:hover': {
+        color: 'gray.5',
+        borderColor: 'gray.5'
       }
     }
   },
