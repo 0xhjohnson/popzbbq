@@ -1,5 +1,5 @@
 import { tailwind } from '@theme-ui/presets';
-import { omit, mergeDeepRight } from 'ramda';
+import { omit, mergeDeepRight, reduce } from 'ramda';
 import { toTheme } from '@theme-ui/typography';
 import usWebDesign from 'typography-theme-us-web-design-standards';
 
@@ -18,6 +18,16 @@ const theme = mergeDeepRight(
         mb: 2,
         color: 'gray.7',
         fontWeight: 'semibold',
+        fontSize: 0
+      },
+      invalidInput: {
+        color: 'red.7',
+        my: -2,
+        fontSize: 0
+      },
+      invalidTextarea: {
+        color: 'red.7',
+        mb: 0,
         fontSize: 0
       }
     },
@@ -54,6 +64,22 @@ const theme = mergeDeepRight(
         '&:focus': {
           borderColor: 'primary',
           boxShadow: '0 0 0 2px rgba(43, 108, 176, 0.2)',
+          outline: 'none'
+        }
+      },
+      invalidInput: {
+        borderColor: 'red.7',
+        p: '8px',
+        '&:focus': {
+          boxShadow: '0 0 0 2px rgba(197, 48, 48, 0.2)',
+          outline: 'none'
+        }
+      },
+      invalidTextarea: {
+        borderColor: 'red.7',
+        p: '8px',
+        '&:focus': {
+          boxShadow: '0 0 0 2px rgba(197, 48, 48, 0.2)',
           outline: 'none'
         }
       }
