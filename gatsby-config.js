@@ -35,7 +35,16 @@ module.exports = {
         Starters: [
           {
             title: 'Delicious Starters',
-            items: ['Smoked Mini-Sweet Peppers', 'BBQ Shrimp']
+            items: [
+              {
+                name: 'Smoked Mini-Sweet Peppers',
+                info: 'Stuffed with cheese and wrapped in bacon'
+              },
+              {
+                name: 'BBQ Shrimp',
+                info: ''
+              }
+            ]
           }
         ]
       },
@@ -43,23 +52,80 @@ module.exports = {
         'Meats and Seafood': [
           {
             title: 'Pork',
-            items: ['Slow Cooked Pulled Pork', 'Whole Hog', 'South Georgia Style Ribs']
+            items: [
+              {
+                name: 'Slow Cooked Pulled Pork',
+                info: 'Cooked 10 to 12 hours'
+              },
+              {
+                name: 'Whole Hog',
+                info: ''
+              },
+              {
+                name: 'South Georgia Style Ribs',
+                info: ''
+              }
+            ]
           },
           {
             title: 'Chicken',
-            items: ['BBQ Smoked Chicken']
+            items: [
+              {
+                name: 'BBQ Smoked Chicken',
+                info: 'Whole, half, or quarter'
+              }
+            ]
           },
           {
             title: 'Beef',
-            items: ['Slow Cooked Beef Brisket', 'Whole Tenderloin', 'Standing Rib Roast', 'Cowboy Cut Rib Eye with Bone In', 'New York Strip']
+            items: [
+              {
+                name: 'Slow Cooked Beef Brisket',
+                info: 'Cooked 12 to 14 hours'
+              },
+              {
+                name: 'Whole Tenderloin',
+                info: ''
+              },
+              {
+                name: 'Standing Rib Roast',
+                info: ''
+              },
+              {
+                name: 'Cowboy Cut Rib Eye with Bone In',
+                info: ''
+              },
+              {
+                name: 'New York Strip',
+                info: ''
+              }
+            ]
           },
           {
             title: 'Lamb',
-            items: ['Rack of Lamb'],
+            items: [
+              {
+                name: 'Rack of Lamb',
+                info: ''
+              }
+            ]
           },
           {
             title: 'Seafood',
-            items: ['Smoked Salmon', 'Fresh Local Caught Fish', 'BBQ Shrimp']
+            items: [
+              {
+                name: 'Smoked Salmon',
+                info: ''
+              },
+              {
+                name: 'Fresh Local Caught Fish',
+                info: ''
+              },
+              {
+                name: 'BBQ Shrimp',
+                info: ''
+              }
+            ]
           }
         ]
       },
@@ -67,7 +133,52 @@ module.exports = {
         Sides: [
           {
             title: 'Sides',
-            items: ['Potato Salad', 'Homemade Macaroni & Cheese', 'Southern Style Green Beans', 'Green Bean Almadine', 'Pasta Salad', 'Baked Beans', 'Corn on the Cob', 'Coleslaw', 'Yellow Rice', 'Garden Salad', 'Red Skin Potatoes']
+            items: [
+              {
+                name: 'Potato Salad',
+                info: ''
+              },
+              {
+                name: 'Homemade Macaroni & Cheese',
+                info: 'With or without bacon'
+              },
+              {
+                name: 'Southern Style Green Beans',
+                info: ''
+              },
+              {
+                name: 'Green Bean Almadine',
+                info: ''
+              },
+              {
+                name: 'Pasta Salad',
+                info: ''
+              },
+              {
+                name: 'Baked Beans',
+                info: ''
+              },
+              {
+                name: 'Corn on the Cob',
+                info: ''
+              },
+              {
+                name: 'Coleslaw',
+                info: ''
+              },
+              {
+                name: 'Yellow Rice',
+                info: ''
+              },
+              {
+                name: 'Garden Salad',
+                info: ''
+              },
+              {
+                name: 'Red Skin Potatoes',
+                info: ''
+              },
+            ]
           }
         ]
       }

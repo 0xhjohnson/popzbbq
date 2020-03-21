@@ -13,15 +13,24 @@ const MenuCategories = ({ selected }) => {
           menuItems {
             Starters {
               title
-              items
+              items {
+                name
+                info
+              }
             }
             Meats_and_Seafood {
               title
-              items
+              items {
+                name
+                info
+              }
             }
             Sides {
               title
-              items
+              items {
+                name
+                info
+              }
             }
           }
         }
@@ -45,14 +54,14 @@ const MenuCategories = ({ selected }) => {
           flexDirection: 'column'
         }} key={categories.title}>
           <Heading as="h3" my={2}>{categories.title}</Heading>
-          <Divider mb={2} color="gray.6" />
+          <Divider mb={1} color="gray.6" />
           <ul>
             {
               categories.items.map((item) => (
-                <li key={item} sx={{
+                <li key={item.name} sx={{
                   listStyleType: 'none',
-                  py: 1
-                }}>{item}</li>
+                  py: [1, 2]
+                }}>{item.name}<p sx={{ fontSize: 0, color: 'gray.7', m: 0 }}>{item.info}</p></li>
               ))
             }
           </ul>
