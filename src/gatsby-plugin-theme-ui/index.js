@@ -104,13 +104,15 @@ const theme = mergeDeepRight(
         }
       },
       navItems: {
+        py: 1,
         px: [null, 1, 2],
         listStyleType: 'none',
         '&:last-child': {
-          py: 1,
-          px: 2,
-          my: 'auto',
           ml: [null, 1, 2, 4],
+        },
+        '&:last-child a': {
+          py: 1,
+          px: [null, 1, 2],
           cursor: 'pointer',
           fontSize: 0,
           bg: 'gray.8',
