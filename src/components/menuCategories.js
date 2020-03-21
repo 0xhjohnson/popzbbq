@@ -1,8 +1,23 @@
 /** @jsx jsx */
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import { jsx, Flex, Button } from 'theme-ui';
 
-const MenuCategories = ({ categories, selected, handleChange }) => {
+const MenuCategories = ({ selected, handleChange }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          menuCategories {
+            name
+          }
+        }
+      }
+    }
+  `);
+
+  const categories = data.site.siteMetadata.menuCategories;
+
   return (
     <Flex
       as="ul"
@@ -15,7 +30,7 @@ const MenuCategories = ({ categories, selected, handleChange }) => {
         <li
           key={category.name}
           sx={{
-            px: [null, 1, 2],
+            px: [1, 2, 3],
             listStyleType: 'none'
           }}>
           <Button

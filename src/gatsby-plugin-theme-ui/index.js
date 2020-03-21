@@ -181,8 +181,8 @@ const theme = mergeDeepRight(
         display: 'flex',
         alignItems: 'center',
         '&:hover': {
-          color: 'gray.5',
-          borderColor: 'gray.5'
+          color: 'gray.6',
+          borderColor: 'gray.6'
         }
       }
     },
@@ -203,8 +203,8 @@ const theme = mergeDeepRight(
       alignItems: 'center',
       transition: 'all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000)',
       '&:hover': {
-        color: 'gray.5',
-        borderColor: 'gray.5'
+        color: 'gray.6',
+        borderColor: 'gray.6'
       }
     }
   },

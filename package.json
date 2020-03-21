@@ -29,6 +29,7 @@
     "typeface-merriweather": "^0.0.72",
     "typeface-source-sans-pro": "^0.0.75",
     "typography-theme-us-web-design-standards": "^0.16.19",
+    "uuid": "^7.0.2",
     "yup": "^0.28.1"
   },
   "devDependencies": {

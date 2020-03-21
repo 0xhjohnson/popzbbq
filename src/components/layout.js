@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   return (
     <Flex sx={{ height: 'screenHeight', flexDirection: 'column' }}>
       <Nav menuLinks={data.site.siteMetadata.menuLinks} />
-      <Container px={4} py={3} sx={{ flex: '1 1 0%' }}>
+      <Container px={[2, 4]} py={3} sx={{ flex: '1 1 0%' }}>
         <main>{children}</main>
       </Container>
       <Footer menuLinks={data.site.siteMetadata.menuLinks} />

@@ -1,33 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import React, { useState } from 'react';
 
 import MenuCategories from './menuCategories';
+import MenuItems from './menuItems';
 
 const FullMenu = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          menuCategories {
-            name
-          }
-        }
-      }
-    }
-  `);
-
   const [category, setCategory] = useState('Starters');
 
-  useEffect(() => {
-    console.log(category);
-  }, [category]);
-
   return (
-    <MenuCategories
-      categories={data.site.siteMetadata.menuCategories}
-      selected={category}
-      handleChange={(e) => setCategory(e.target.textContent)}
-    />
+    <>
+      <MenuCategories
+        selected={category}
+        handleChange={(e) => setCategory(e.target.textContent)}
+      />
+      <MenuItems selected={category} />
+    </>
   );
 };
 

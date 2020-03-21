@@ -29,6 +29,48 @@ module.exports = {
       { name: 'Starters' },
       { name: 'Meats and Seafood' },
       { name: 'Sides' }
+    ],
+    menuItems: [
+      {
+        Starters: [
+          {
+            title: 'Delicious Starters',
+            items: ['Smoked Mini-Sweet Peppers', 'BBQ Shrimp']
+          }
+        ]
+      },
+      {
+        'Meats and Seafood': [
+          {
+            title: 'Pork',
+            items: ['Slow Cooked Pulled Pork', 'Whole Hog', 'South Georgia Style Ribs']
+          },
+          {
+            title: 'Chicken',
+            items: ['BBQ Smoked Chicken']
+          },
+          {
+            title: 'Beef',
+            items: ['Slow Cooked Beef Brisket', 'Whole Tenderloin', 'Standing Rib Roast', 'Cowboy Cut Rib Eye with Bone In', 'New York Strip']
+          },
+          {
+            title: 'Lamb',
+            items: ['Rack of Lamb'],
+          },
+          {
+            title: 'Seafood',
+            items: ['Smoked Salmon', 'Fresh Local Caught Fish', 'BBQ Shrimp']
+          }
+        ]
+      },
+      {
+        Sides: [
+          {
+            title: 'Sides',
+            items: ['Potato Salad', 'Homemade Macaroni & Cheese', 'Southern Style Green Beans', 'Green Bean Almadine', 'Pasta Salad', 'Baked Beans', 'Corn on the Cob', 'Coleslaw', 'Yellow Rice', 'Garden Salad', 'Red Skin Potatoes']
+          }
+        ]
+      }
     ]
   },
   plugins: [

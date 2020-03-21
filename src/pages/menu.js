@@ -8,7 +8,7 @@ import FullMenu from '../components/fullMenu';
 const Menu = () => (
   <Layout>
     <SEO title="Menu" />
-    <Heading as="h1">Menu</Heading>
+    <Heading as="h1" my={2}>Menu</Heading>
     <FullMenu />
   </Layout>
 );
