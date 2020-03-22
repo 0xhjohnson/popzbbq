@@ -53,7 +53,7 @@ const BookEvent = () => {
 
   return (
     <Layout>
-      <SEO title="Book an event" />
+      <SEO title="Book an Event" />
       <Box mx={[0, null, null, 4, 5]} mt={[0, null, null, 4]}>
         <Heading as="h1" my={2}>
           Book an Event

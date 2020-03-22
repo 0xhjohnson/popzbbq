@@ -1,5 +1,5 @@
 import { tailwind } from '@theme-ui/presets';
-import { omit, mergeDeepRight, none } from 'ramda';
+import { omit, mergeDeepRight } from 'ramda';
 import { toTheme } from '@theme-ui/typography';
 import usWebDesign from 'typography-theme-us-web-design-standards';
 
