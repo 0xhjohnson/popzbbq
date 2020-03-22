@@ -1,5 +1,5 @@
 import { tailwind } from '@theme-ui/presets';
-import { omit, mergeDeepRight } from 'ramda';
+import { omit, mergeDeepRight, none } from 'ramda';
 import { toTheme } from '@theme-ui/typography';
 import usWebDesign from 'typography-theme-us-web-design-standards';
 
@@ -103,6 +103,19 @@ const theme = mergeDeepRight(
           color: 'gray.2'
         }
       },
+      mobileHeaderLink: {
+        py: 1,
+        px: 2,
+        color: 'gray.4',
+        textDecoration: 'none',
+        borderRadius: '.375rem',
+        transition: 'all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000)',
+        display: 'block',
+        '&:hover': {
+          bg: 'gray.8',
+          color: 'gray.2'
+        }
+      },
       navItems: {
         py: 1,
         px: [null, 1, 2],
@@ -155,17 +168,45 @@ const theme = mergeDeepRight(
       }
     },
     buttons: {
+      close: {
+        width: 10,
+        height: 10,
+        color: 'gray.4',
+        borderRadius: '.375rem',
+        cursor: 'pointer',
+        '&:hover': {
+          color: 'gray.1',
+          bg: 'gray.8'
+        },
+        transitionDuration: '.15s',
+        transitionTimingFunction: 'cubic-bezier(.4,0,.2,1)',
+        transitionProperty: 'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform'
+      },
+      menu: {
+        width: 10,
+        height: 10,
+        color: 'gray.4',
+        borderRadius: '.375rem',
+        cursor: 'pointer',
+        '&:hover': {
+          color: 'gray.1',
+          bg: 'gray.8'
+        },
+        transitionDuration: '.15s',
+        transitionTimingFunction: 'cubic-bezier(.4,0,.2,1)',
+        transitionProperty: 'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform'
+      },
       primary: {
         color: 'background',
-        bg: 'blue.6',
+        bg: 'blue.7',
         cursor: 'pointer',
         outline: 0,
         transition: 'all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1)',
         '&:hover, &:focus': {
-          bg: 'blue.5'
+          bg: 'blue.6'
         },
         '&:active': {
-          bg: 'blue.7'
+          bg: 'blue.8'
         }
       },
       outline: {
