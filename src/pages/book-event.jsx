@@ -15,8 +15,8 @@ import { object, string, date } from 'yup';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
 const phoneRegEx = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
@@ -49,7 +49,7 @@ const BookEvent = () => {
     register({ name: 'eventDate' });
   }, [register]);
 
-  const handleChange = (date) => setValue('eventDate', date, true);
+  const handleChange = (d) => setValue('eventDate', d, true);
 
   return (
     <Layout>

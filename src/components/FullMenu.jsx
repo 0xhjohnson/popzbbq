@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import MenuCategories from './menuCategories';
-import MenuItems from './menuItems';
+import MenuCategories from './MenuCategories';
+import MenuItems from './MenuItems';
 
 const FullMenu = () => {
   const [category, setCategory] = useState('Starters');

@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import React from 'react';
+import React from 'react'; // eslint-disable-line no-unused-vars
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Container, Flex, jsx } from 'theme-ui';
 import 'normalize.css';
 
-import Nav from './nav';
-import Footer from './footer';
+import Nav from './Nav';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

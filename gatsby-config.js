@@ -81,7 +81,8 @@ module.exports = {
             items: [
               {
                 name: 'Slow Cooked Beef Brisket',
-                info: 'Beef brisket seasoned with our signature rub and cooked 12 to 14 hours'
+                info:
+                  'Beef brisket seasoned with our signature rub and cooked 12 to 14 hours'
               },
               {
                 name: 'Whole Tenderloin',
@@ -177,7 +178,7 @@ module.exports = {
               {
                 name: 'Red Skin Potatoes',
                 info: 'Fresh red skin potatoes'
-              },
+              }
             ]
           }
         ]

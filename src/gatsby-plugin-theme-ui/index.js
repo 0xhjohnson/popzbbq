@@ -121,7 +121,7 @@ const theme = mergeDeepRight(
         px: [null, 1, 2],
         listStyleType: 'none',
         '&:last-child': {
-          ml: [null, 1, 2, 4],
+          ml: [null, 1, 2, 4]
         },
         '&:last-child a': {
           py: 1,
@@ -139,9 +139,7 @@ const theme = mergeDeepRight(
         }
       },
       footerBlock: {
-        // py: 3,
-        gridColumn: 'span 1 / span 1',
-        // px: [2, 0]
+        gridColumn: 'span 1 / span 1'
       },
       footerListItem: {
         listStyleType: 'none',
@@ -180,7 +178,8 @@ const theme = mergeDeepRight(
         },
         transitionDuration: '.15s',
         transitionTimingFunction: 'cubic-bezier(.4,0,.2,1)',
-        transitionProperty: 'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform'
+        transitionProperty:
+          'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform'
       },
       menu: {
         width: 10,
@@ -194,7 +193,8 @@ const theme = mergeDeepRight(
         },
         transitionDuration: '.15s',
         transitionTimingFunction: 'cubic-bezier(.4,0,.2,1)',
-        transitionProperty: 'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform'
+        transitionProperty:
+          'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform'
       },
       primary: {
         color: 'background',
