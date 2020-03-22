@@ -15,7 +15,7 @@ const theme = mergeDeepRight(
     text: {
       footerSubheading: {
         m: 0,
-        mb: 2,
+        mb: 1,
         color: 'gray.7',
         fontWeight: 'semibold',
         fontSize: 0
@@ -139,9 +139,9 @@ const theme = mergeDeepRight(
         }
       },
       footerBlock: {
-        mx: [null, 0, 0, 2, 3],
-        py: 3,
-        px: [null, 3, null, null, 4]
+        // py: 3,
+        gridColumn: 'span 1 / span 1',
+        // px: [2, 0]
       },
       footerListItem: {
         listStyleType: 'none',
