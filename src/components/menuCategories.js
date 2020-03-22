@@ -24,13 +24,13 @@ const MenuCategories = ({ selected, handleChange }) => {
       py={2}
       sx={{
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: ['space-between', 'center']
       }}>
       {categories.map((category) => (
         <li
           key={category.name}
           sx={{
-            px: [1, 2, 3],
+            px: [0, 1, 2, 3],
             listStyleType: 'none'
           }}>
           <Button

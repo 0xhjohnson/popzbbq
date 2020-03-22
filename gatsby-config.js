@@ -38,11 +38,11 @@ module.exports = {
             items: [
               {
                 name: 'Smoked Mini-Sweet Peppers',
-                info: 'Stuffed with cheese and wrapped in bacon'
+                info: 'Stuffed with cream cheese and wrapped in bacon'
               },
               {
                 name: 'BBQ Shrimp',
-                info: ''
+                info: `Pop'z BBQ shrimp`
               }
             ]
           }
@@ -55,15 +55,15 @@ module.exports = {
             items: [
               {
                 name: 'Slow Cooked Pulled Pork',
-                info: 'Cooked 10 to 12 hours'
+                info: 'Tender pulled pork cooked 10 to 12 hours'
               },
               {
                 name: 'Whole Hog',
-                info: ''
+                info: 'Whole hog with fruit over eyes for presentation'
               },
               {
                 name: 'South Georgia Style Ribs',
-                info: ''
+                info: 'Fall off the bone, south Georgia style ribs'
               }
             ]
           },
@@ -72,7 +72,7 @@ module.exports = {
             items: [
               {
                 name: 'BBQ Smoked Chicken',
-                info: 'Whole, half, or quarter'
+                info: 'Smoked chicken served whole, halved, or quartered'
               }
             ]
           },
@@ -81,7 +81,7 @@ module.exports = {
             items: [
               {
                 name: 'Slow Cooked Beef Brisket',
-                info: 'Cooked 12 to 14 hours'
+                info: 'Beef brisket seasoned with our signature rub and cooked 12 to 14 hours'
               },
               {
                 name: 'Whole Tenderloin',
@@ -123,7 +123,7 @@ module.exports = {
               },
               {
                 name: 'BBQ Shrimp',
-                info: ''
+                info: `Pop'z BBQ shrimp`
               }
             ]
           }
@@ -140,7 +140,7 @@ module.exports = {
               },
               {
                 name: 'Homemade Macaroni & Cheese',
-                info: 'With or without bacon'
+                info: 'Classic, creamy mac & cheese with or without bacon'
               },
               {
                 name: 'Southern Style Green Beans',
@@ -156,11 +156,11 @@ module.exports = {
               },
               {
                 name: 'Baked Beans',
-                info: ''
+                info: `Pop'z BBQ baked beans`
               },
               {
                 name: 'Corn on the Cob',
-                info: ''
+                info: 'Fresh corn on the cob seasoned to perfection'
               },
               {
                 name: 'Coleslaw',
@@ -176,7 +176,7 @@ module.exports = {
               },
               {
                 name: 'Red Skin Potatoes',
-                info: ''
+                info: 'Fresh red skin potatoes'
               },
             ]
           }
