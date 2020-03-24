@@ -34,6 +34,10 @@ const theme = mergeDeepRight(
     layout: {
       container: {
         maxWidth: '1280px'
+      },
+      mxContainer: {
+        maxWidth: '1280px',
+        mx: 'auto'
       }
     },
     forms: {
@@ -95,7 +99,6 @@ const theme = mergeDeepRight(
         py: 1
       },
       headerLink: {
-        px: [1, 2],
         color: 'gray.4',
         textDecoration: 'none',
         transition: 'all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000)',
@@ -117,21 +120,17 @@ const theme = mergeDeepRight(
         }
       },
       navItems: {
-        py: 1,
-        px: [null, 1, 2],
         listStyleType: 'none',
-        '&:last-child': {
-          ml: [null, 1, 2, 4]
-        },
+        ml: '32px',
         '&:last-child a': {
           py: 1,
-          px: [null, 1, 2],
+          px: 2,
           cursor: 'pointer',
           fontSize: 0,
           bg: 'gray.8',
           fontWeight: 'semibold',
           borderRadius: 'default',
-          maxHeight: '35px',
+          display: 'block',
           '&:hover': {
             bg: 'gray.7',
             transition: 'all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000)'

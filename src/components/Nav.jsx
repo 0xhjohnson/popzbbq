@@ -28,6 +28,9 @@ const Nav = ({ menuLinks }) => {
           bg: 'gray.9',
           variant: 'styles.header',
           justifyContent: 'space-between',
+          '@media screen and (min-width: 640px)': {
+            justifyContent: 'flex-start'
+          },
           alignItems: 'center'
         }}
       >
