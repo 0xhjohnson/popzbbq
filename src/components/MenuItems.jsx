@@ -1,7 +1,5 @@
-/** @jsx jsx */
-import React from 'react'; // eslint-disable-line no-unused-vars
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { jsx, Flex, Heading, Divider } from 'theme-ui';
 import { nth } from 'ramda';
 import PropTypes from 'prop-types';
 
@@ -51,32 +49,21 @@ const MenuItems = ({ selected }) => {
   return (
     <>
       {selectedMenuItems.map((categories) => (
-        <Flex
-          px={[null, 1, 3, 6]}
-          sx={{
-            flexDirection: 'column'
-          }}
+        <div
+          className="flex flex-col sm:px-1 md:px-3 lg:px-6"
           key={categories.title}
         >
-          <Heading as="h3" my={2}>
-            {categories.title}
-          </Heading>
-          <Divider mb={1} color="gray.6" />
+          <h3 className="my-2">{categories.title}</h3>
+          <hr className="my-2 border-b border-gray-600" />
           <ul>
             {categories.items.map((item) => (
-              <li
-                key={item.name}
-                sx={{
-                  listStyleType: 'none',
-                  py: [1, 2]
-                }}
-              >
+              <li key={item.name} className="py-1 sm:py-2">
                 {item.name}
-                <p sx={{ fontSize: 0, color: 'gray.7', m: 0 }}>{item.info}</p>
+                <p className="text-sm text-gray-700">{item.info}</p>
               </li>
             ))}
           </ul>
-        </Flex>
+        </div>
       ))}
     </>
   );

@@ -199,16 +199,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Pop'z BBQ`,
+        name: `Pop'z BBQ & Catering`,
         short_name: `Pop'z BBQ`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/popz-bbq-icon.png` // This path is relative to the root of the site.
+        icon: `src/images/popz-bbq-icon.png`
       }
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-theme-ui`
+    {
+      resolve: 'gatsby-plugin-postcss',
+      options: {
+        postCssPlugins: [
+          require('tailwindcss')('./tailwind.config.js'),
+          require('autoprefixer'),
+          require('cssnano')
+        ]
+      }
+    },
+    `gatsby-plugin-offline`
   ]
 };

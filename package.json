@@ -5,18 +5,16 @@
   "version": "0.1.0",
   "author": "0xhjohnson <0xhjohnson@protonmail.com>",
   "dependencies": {
-    "@theme-ui/presets": "^0.3.0",
-    "@theme-ui/typography": "^0.3.0",
+    "classnames": "^2.2.6",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-postcss": "^2.2.1",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sharp": "^2.4.3",
-    "gatsby-plugin-theme-ui": "^0.3.0",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-sharp": "^2.3.13",
-    "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "ramda": "^0.27.0",
     "react": "^16.12.0",
@@ -25,14 +23,12 @@
     "react-helmet": "^5.2.1",
     "react-hook-form": "^4.9.3",
     "react-icons": "^3.9.0",
-    "theme-ui": "^0.3.1",
-    "typeface-merriweather": "^0.0.72",
-    "typeface-source-sans-pro": "^0.0.75",
-    "typography-theme-us-web-design-standards": "^0.16.19",
     "uuid": "^7.0.2",
     "yup": "^0.28.1"
   },
   "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "cssnano": "^4.1.10",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.1",
@@ -41,7 +37,8 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "tailwindcss": "^1.2.0"
   },
   "keywords": [
     "gatsby"

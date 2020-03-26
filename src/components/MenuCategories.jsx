@@ -1,8 +1,7 @@
-/** @jsx jsx */
-import React from 'react'; // eslint-disable-line no-unused-vars
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { jsx, Flex, Button } from 'theme-ui';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const MenuCategories = ({ selected, handleChange }) => {
   const data = useStaticQuery(graphql`
@@ -16,35 +15,25 @@ const MenuCategories = ({ selected, handleChange }) => {
       }
     }
   `);
-
   const categories = data.site.siteMetadata.menuCategories;
 
   return (
-    <Flex
-      as="ul"
-      py={2}
-      sx={{
-        alignItems: 'center',
-        justifyContent: ['space-between', 'center']
-      }}
-    >
+    <ul className="flex py-2 items-center justify-between sm:justify-center">
       {categories.map((category) => (
-        <li
-          key={category.name}
-          sx={{
-            px: [0, 1, 2, 3],
-            listStyleType: 'none'
-          }}
-        >
-          <Button
-            variant={category.name === selected ? 'outline' : 'minimal'}
+        <li key={category.name} className="px-0 sm:px-1 md:px-2 lg:px-3">
+          <button
+            type="button"
+            className={classNames('btn', {
+              'border-gray-700': category.name === selected,
+              'border-transparent': category.name !== selected
+            })}
             onClick={handleChange}
           >
             {category.name}
-          </Button>
+          </button>
         </li>
       ))}
-    </Flex>
+    </ul>
   );
 };
 

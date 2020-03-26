@@ -1,0 +1,45 @@
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+ */
+@tailwind base;
+
+/**
+ * This injects Tailwind's component classes and any component classes
+ * registered by plugins.
+ */
+@tailwind components;
+
+/**
+ * Component extracts created using @apply to inline any existing utility
+ * classes into custom css. AKA using tailwind utility classes to create
+ * custom css classes. Prevents you from having to write same button
+ * utility classes over and over.
+ */
+.btn {
+  @apply font-medium py-2 px-4 rounded border border-transparent text-sm leading-5 rounded-md;
+}
+.btn-orange {
+  @apply bg-orange-600 text-white transition duration-150 ease-in-out;
+}
+.btn-orange:hover {
+  @apply bg-orange-500;
+}
+.btn-orange:focus {
+  @apply outline-none border-orange-700;
+}
+.btn-orange:active {
+  @apply bg-orange-700;
+}
+.form-input {
+  @apply bg-white border border-gray-300 rounded-md appearance-none py-2 px-4 leading-normal text-base;
+}
+.form-input:focus {
+  @apply outline-none shadow-outline;
+}
+
+/**
+ * This injects Tailwind's utility classes and any utility classes registered
+ * by plugins.
+ */
+@tailwind utilities;
