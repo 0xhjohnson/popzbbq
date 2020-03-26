@@ -37,6 +37,9 @@
 .form-input:focus {
   @apply outline-none shadow-outline;
 }
+.nav-active {
+  @apply bg-gray-900 text-white;
+}
 
 /**
  * This injects Tailwind's utility classes and any utility classes registered

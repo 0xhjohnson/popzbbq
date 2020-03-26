@@ -27,13 +27,13 @@ const Nav = ({ menuLinks }) => {
     'inline-flex': isOpen,
     hidden: !isOpen
   });
-  const mobileMenuClasses = classNames('sm:hidden', {
+  const mobileMenuClasses = classNames('px-2', 'pt-2', 'pb-3', 'sm:hidden', {
     hidden: !isOpen,
     block: isOpen
   });
 
   return (
-    <div className="bg-gray-800">
+    <header className="bg-gray-800">
       <div className="flex px-2 py-1 sm:px-3 md:px-4 justify-between sm:justify-start items-center">
         <div className="p-1 mr-2">
           <Link to="/" className="text-white no-underline block">
@@ -90,24 +90,38 @@ const Nav = ({ menuLinks }) => {
         </nav>
       </div>
       {/* mobile menu dropdown */}
-      <div className={mobileMenuClasses}>
-        <nav>
-          <ul>
-            {menuLinks.map((link) => (
-              <li key={link.name}>
-                <Link
-                  to={link.link}
-                  activeStyle={{ color: 'white' }}
-                  className="py-1 px-2 text-gray-400 no-underline rounded-md transition duration-150 hover:bg-gray-800 hover:text-gray-200"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-    </div>
+      <nav className={mobileMenuClasses}>
+        <ul>
+          {menuLinks.map((link, idx) => (
+            <li key={link.name}>
+              <Link
+                to={link.link}
+                activeClassName="nav-active"
+                className={classNames(
+                  'block',
+                  'px-3',
+                  'py-2',
+                  'rounded-md',
+                  'font-medium',
+                  'text-gray-300',
+                  'hover:text-white',
+                  'hover:bg-gray-700',
+                  'focus:outline-none',
+                  'focus:text-white',
+                  'focus:bg-gray-700',
+                  'transition',
+                  'duration-150',
+                  'ease-in-out',
+                  { 'mt-1': idx > 0 }
+                )}
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
   );
 };
 
