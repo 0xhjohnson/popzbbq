@@ -1,7 +1,5 @@
-/** @jsx jsx */
-import React from 'react'; // eslint-disable-line no-unused-vars
+import React from 'react';
 import Img from 'gatsby-image';
-import { Heading, Grid, jsx } from 'theme-ui';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
@@ -43,19 +41,17 @@ const Gallery = () => {
   return (
     <Layout>
       <SEO title="Gallery" />
-      <Heading as="h1" my={2}>
-        Gallery
-      </Heading>
-      <Grid gap={3} columns={[null, 2, 3]} py={3}>
+      <h1 className="my-2">Gallery</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 py-3">
         {allFile.edges.map(({ node }) => (
           <Img
             key={node.id}
             fluid={node.childImageSharp.fluid}
             alt={filenameToTitle(node.childImageSharp.fluid.originalName)}
-            sx={{ borderRadius: 'sm' }}
+            className="rounded-sm"
           />
         ))}
-      </Grid>
+      </div>
     </Layout>
   );
 };

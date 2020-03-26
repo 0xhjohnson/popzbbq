@@ -1,15 +1,5 @@
 import React, { useEffect } from 'react';
 import DatePicker from 'react-datepicker';
-import {
-  Heading,
-  Grid,
-  Box,
-  Input,
-  Label,
-  Textarea,
-  Button,
-  Text
-} from 'theme-ui';
 import { useForm, ErrorMessage } from 'react-hook-form';
 import { object, string, date } from 'yup';
 
@@ -54,98 +44,116 @@ const BookEvent = () => {
   return (
     <Layout>
       <SEO title="Book an Event" />
-      <Box mx={[0, null, null, 4, 5]} mt={[0, null, null, 4]}>
-        <Heading as="h1" my={2}>
-          Book an Event
-        </Heading>
-        <Grid gap={(null, [1, 4])} columns={[null, 1, 2]}>
-          <Heading as="h4" my={3} sx={{ lineHeight: 'normal' }}>
+      <div className="mx-0 lg:mx-4 xl:mx-5 mt-0 lg:mt-4">
+        <h1 className="my-2">Book an Event</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-4">
+          <h4 className="my-3">
             I look forward to catering your next event and am here to answer any
             questions you may have. Fill out the contact form below with details
             regarding your event and I will personally get back with you within
             24 hours.
-          </Heading>
-          <Box as="form" onSubmit={handleSubmit(onSubmit)}>
-            <Label htmlFor="name" mt={[null, 0, 2]}>
+          </h4>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <label
+              htmlFor="name"
+              className="block text-sm leading-5 font-medium text-gray-700 mt-0 md:mt-2"
+            >
               Name
-            </Label>
-            <Input
-              name="name"
-              mb={2}
-              variant={errors.name ? 'invalidInput' : 'input'}
-              ref={register}
-            />
+              <input
+                id="name"
+                name="name"
+                className="form-input block w-full sm:text-sm sm:leading-5"
+                ref={register}
+              />
+            </label>
             <ErrorMessage errors={errors} name="name">
-              {({ message }) => <Text variant="invalidInput">{message}</Text>}
+              {({ message }) => (
+                <p className="color-red-700 text-sm">{message}</p>
+              )}
             </ErrorMessage>
-            <Label htmlFor="email" mt={[null, 0, 3]}>
+            <label
+              htmlFor="email"
+              className="block text-sm leading-5 font-medium text-gray-700 mt-0 md:mt-3"
+            >
               Email
-            </Label>
-            <Input
-              name="email"
-              mb={2}
-              variant={errors.email ? 'invalidInput' : 'input'}
-              ref={register}
-            />
+              <input
+                id="email"
+                name="email"
+                className="form-input block w-full sm:text-sm sm:leading-5 mb-2"
+                ref={register}
+              />
+            </label>
             <ErrorMessage errors={errors} name="email">
-              {({ message }) => <Text variant="invalidInput">{message}</Text>}
+              {({ message }) => (
+                <p className="color-red-700 text-sm">{message}</p>
+              )}
             </ErrorMessage>
-            <Label htmlFor="phone" mt={[null, 0, 3]}>
-              Phone number
-            </Label>
-            <Input
-              name="phone"
-              mb={2}
-              variant={errors.phone ? 'invalidInput' : 'input'}
-              ref={register}
-            />
+            <label
+              htmlFor="phone"
+              className="block text-sm leading-5 font-medium text-gray-700 mt-0 md:mt-3"
+            >
+              Phone
+              <input
+                id="phone"
+                name="phone"
+                className="form-input block w-full sm:text-sm sm:leading-5 mb-2"
+                ref={register}
+              />
+            </label>
             <ErrorMessage errors={errors} name="phone">
-              {({ message }) => <Text variant="invalidInput">{message}</Text>}
+              {({ message }) => (
+                <p className="color-red-700 text-sm">{message}</p>
+              )}
             </ErrorMessage>
-            <Label htmlFor="eventDate" mt={[null, 0, 3]}>
+            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+            <label
+              htmlFor="eventDate"
+              className="block text-sm leading-5 font-medium text-gray-700 mt-0 md:mt-3"
+            >
               Event date
-            </Label>
-            <DatePicker
-              onChange={handleChange}
-              selected={eventDate}
-              showTimeSelect
-              timeIntervals={30}
-              timeCaption="Time"
-              dateFormat="MMM d yyyy h:mm aa"
-              customInput={
-                <Input
-                  mb={2}
-                  variant={errors.eventDate ? 'invalidInput' : 'input'}
-                />
-              }
-            />
+              <DatePicker
+                onChange={handleChange}
+                selected={eventDate}
+                showTimeSelect
+                timeIntervals={30}
+                timeCaption="Time"
+                dateFormat="MMM d yyyy h:mm aa"
+                customInput={
+                  <input id="eventDate" name="eventDate" className="m-2" />
+                }
+              />
+            </label>
             <ErrorMessage errors={errors} name="eventDate">
               {() => (
-                <Text variant="invalidInput">
+                <p className="color-red-700 text-sm">
                   Event date is a required field.
-                </Text>
+                </p>
               )}
             </ErrorMessage>
-            <Label htmlFor="details" mt={[null, 0, 3]}>
+            <label
+              htmlFor="details"
+              className="block text-sm leading-5 font-medium text-gray-700 mt-0 md:mt-3"
+            >
               Details
-            </Label>
-            <Textarea
-              name="details"
-              rows="5"
-              variant={errors.details ? 'invalidTextarea' : 'textarea'}
-              ref={register}
-            />
+              <textarea
+                id="details"
+                name="details"
+                className="form-input block w-full sm:text-sm sm:leading-5 mb-2"
+                rows="5"
+                ref={register}
+              />
+            </label>
             <ErrorMessage errors={errors} name="details">
               {({ message }) => (
-                <Text variant="invalidTextarea">{message}</Text>
+                <p className="color-red-700 text-sm">{message}</p>
               )}
             </ErrorMessage>
-            <Button py={1} px={2} my={2}>
+            <button type="button" className="btn btn-primary">
               Submit
-            </Button>
-          </Box>
-        </Grid>
-      </Box>
+            </button>
+          </form>
+        </div>
+      </div>
     </Layout>
   );
 };

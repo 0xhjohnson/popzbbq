@@ -1,9 +1,7 @@
-/** @jsx jsx */
-import React from 'react'; // eslint-disable-line no-unused-vars
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Container, Flex, jsx } from 'theme-ui';
-import 'normalize.css';
+import '../styles/style.css';
 
 import Nav from './Nav';
 import Footer from './Footer';
@@ -25,24 +23,24 @@ const Layout = ({ children, fullWidth }) => {
   let mainContent;
   if (fullWidth) {
     mainContent = (
-      <Container variant="mxContainer">
+      <div className="container-xl">
         <main>{children}</main>
-      </Container>
+      </div>
     );
   } else {
     mainContent = (
-      <Container px={[2, 4]} py={3} sx={{ flex: '1 1 0%' }}>
+      <div className="px-2 sm:px-4 py-3 flex-1">
         <main>{children}</main>
-      </Container>
+      </div>
     );
   }
 
   return (
-    <Flex sx={{ height: 'screenHeight', flexDirection: 'column' }}>
+    <div className="flex h-screen flex-col">
       <Nav menuLinks={data.site.siteMetadata.menuLinks} />
       {mainContent}
       <Footer menuLinks={data.site.siteMetadata.menuLinks} />
-    </Flex>
+    </div>
   );
 };
 
