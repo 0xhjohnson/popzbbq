@@ -27,14 +27,14 @@ const Nav = ({ menuLinks }) => {
     'inline-flex': isOpen,
     hidden: !isOpen
   });
-  const mobileMenuClasses = classNames('bg-gray-800', 'sm:hidden', {
+  const mobileMenuClasses = classNames('sm:hidden', {
     hidden: !isOpen,
     block: isOpen
   });
 
   return (
-    <>
-      <div className="flex px-2 py-1 sm:px-3 md:px-4 bg-gray-800 justify-between sm:justify-start items-center">
+    <div className="bg-gray-800">
+      <div className="flex px-2 py-1 sm:px-3 md:px-4 justify-between sm:justify-start items-center">
         <div className="p-1 mr-2">
           <Link to="/" className="text-white no-underline block">
             <Img
@@ -46,7 +46,7 @@ const Nav = ({ menuLinks }) => {
         <div className="flex items-center sm:hidden">
           <button
             type="button"
-            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 bg-gray-800 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
+            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg
@@ -107,7 +107,7 @@ const Nav = ({ menuLinks }) => {
           </ul>
         </nav>
       </div>
-    </>
+    </div>
   );
 };
 
