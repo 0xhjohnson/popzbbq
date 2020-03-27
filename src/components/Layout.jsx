@@ -23,7 +23,7 @@ const Layout = ({ children, fullWidth }) => {
   let mainContent;
   if (fullWidth) {
     mainContent = (
-      <div className="container-xl">
+      <div className="container-xl flex-1">
         <main>{children}</main>
       </div>
     );
