@@ -20,11 +20,13 @@ const MenuCategories = ({ selected, handleChange }) => {
   return (
     <ul className="flex mb-3 items-center justify-between sm:justify-center">
       {categories.map((category) => (
-        <li key={category.name} className="px-0 sm:px-1 md:px-2 lg:px-3">
+        <li key={category.name}>
           <button
             type="button"
             className={classNames(
               'btn',
+              'mx-0',
+              'sm:mx-4',
               'text-gray-900',
               'hover:border-gray-600',
               'hover:text-gray-600',

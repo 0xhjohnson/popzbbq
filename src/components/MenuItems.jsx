@@ -56,7 +56,7 @@ const MenuItems = ({ selected }) => {
           <hr className="my-2 border-b border-gray-600" />
           <ul>
             {categories.items.map((item) => (
-              <li key={item.name} className="py-1 sm:py-2 text-gray-900">
+              <li key={item.name} className="py-2 text-gray-900">
                 {item.name}
                 <p className="text-sm text-gray-700">{item.info}</p>
               </li>
