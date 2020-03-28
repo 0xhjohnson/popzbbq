@@ -42,10 +42,9 @@ const BookEvent = () => {
   const handleChange = (d) => setValue('eventDate', d, true);
 
   return (
-    <Layout>
+    <Layout title="Book an Event">
       <SEO title="Book an Event" />
       <div className="mx-0 lg:mx-4 xl:mx-5 mt-0 lg:mt-4">
-        <h1 className="my-2">Book an Event</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-4">
           <h4 className="my-3">
             I look forward to catering your next event and am here to answer any

@@ -4,9 +4,10 @@ import { useStaticQuery, graphql } from 'gatsby';
 import '../styles/style.css';
 
 import Nav from './Nav';
+import Header from './Header';
 import Footer from './Footer';
 
-const Layout = ({ children, fullWidth }) => {
+const Layout = ({ children, fullWidth, title }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -38,6 +39,7 @@ const Layout = ({ children, fullWidth }) => {
   return (
     <div className="flex h-screen flex-col">
       <Nav menuLinks={data.site.siteMetadata.menuLinks} />
+      {title && <Header title={title} />}
       {mainContent}
       <Footer menuLinks={data.site.siteMetadata.menuLinks} />
     </div>
@@ -46,11 +48,13 @@ const Layout = ({ children, fullWidth }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  fullWidth: PropTypes.bool
+  fullWidth: PropTypes.bool,
+  title: PropTypes.string
 };
 
 Layout.defaultProps = {
-  fullWidth: false
+  fullWidth: false,
+  title: ''
 };
 
 export default Layout;

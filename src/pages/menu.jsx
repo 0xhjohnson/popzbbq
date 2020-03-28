@@ -5,9 +5,8 @@ import SEO from '../components/SEO';
 import FullMenu from '../components/FullMenu';
 
 const Menu = () => (
-  <Layout>
+  <Layout title="Menu">
     <SEO title="Menu" />
-    <h1 className="my-2">Menu</h1>
     <FullMenu />
   </Layout>
 );

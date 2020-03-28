@@ -33,7 +33,7 @@ const Nav = ({ menuLinks }) => {
   });
 
   return (
-    <header className="bg-gray-800">
+    <div className="bg-gray-800">
       <div className="flex px-2 py-1 sm:px-3 md:px-4 justify-between sm:justify-start items-center">
         <div className="p-1 mr-2">
           <Link to="/" className="text-white no-underline block">
@@ -121,7 +121,7 @@ const Nav = ({ menuLinks }) => {
           ))}
         </ul>
       </nav>
-    </header>
+    </div>
   );
 };
 

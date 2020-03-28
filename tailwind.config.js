@@ -7,7 +7,11 @@ module.exports = {
       mono:
         'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
     },
-    extend: {}
+    extend: {
+      maxWidth: {
+        '7xl': '80rem'
+      }
+    }
   },
   variants: {},
   plugins: []

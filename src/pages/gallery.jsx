@@ -39,9 +39,8 @@ const Gallery = () => {
   };
 
   return (
-    <Layout>
+    <Layout title="Gallery">
       <SEO title="Gallery" />
-      <h1 className="my-2">Gallery</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 py-3">
         {allFile.edges.map(({ node }) => (
           <Img
