@@ -42,6 +42,13 @@
 }
 
 /**
+ * Globals
+ */
+body {
+  font-family: Inter, sans-serif;
+}
+
+/**
  * This injects Tailwind's utility classes and any utility classes registered
  * by plugins.
  */
