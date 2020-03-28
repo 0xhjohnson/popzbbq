@@ -17,7 +17,7 @@
  * utility classes over and over.
  */
 .btn {
-  @apply font-medium py-2 px-4 rounded border border-transparent text-sm leading-5 rounded-md;
+  @apply font-medium py-2 px-4 border border-transparent text-sm leading-5 rounded-md;
 }
 .btn-orange {
   @apply bg-orange-600 text-white transition duration-150 ease-in-out;

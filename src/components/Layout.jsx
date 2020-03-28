@@ -24,13 +24,13 @@ const Layout = ({ children, fullWidth, title }) => {
   let mainContent;
   if (fullWidth) {
     mainContent = (
-      <div className="container-xl flex-1">
+      <div className="flex-1">
         <main>{children}</main>
       </div>
     );
   } else {
     mainContent = (
-      <div className="px-2 sm:px-4 py-3 flex-1">
+      <div className="px-2 sm:px-4 flex-1 justify-center">
         <main>{children}</main>
       </div>
     );

@@ -41,13 +41,13 @@ const Gallery = () => {
   return (
     <Layout title="Gallery">
       <SEO title="Gallery" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 py-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mt-10 mb-12 max-w-5xl mx-auto">
         {allFile.edges.map(({ node }) => (
           <Img
             key={node.id}
             fluid={node.childImageSharp.fluid}
             alt={filenameToTitle(node.childImageSharp.fluid.originalName)}
-            className="rounded-sm"
+            className="rounded-md"
           />
         ))}
       </div>

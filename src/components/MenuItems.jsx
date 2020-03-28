@@ -49,15 +49,14 @@ const MenuItems = ({ selected }) => {
   return (
     <>
       {selectedMenuItems.map((categories) => (
-        <div
-          className="flex flex-col sm:px-1 md:px-3 lg:px-6"
-          key={categories.title}
-        >
-          <h3 className="my-2">{categories.title}</h3>
+        <div className="flex flex-col" key={categories.title}>
+          <h3 className="mt-5 font-medium text-gray-700 text-lg">
+            {categories.title}
+          </h3>
           <hr className="my-2 border-b border-gray-600" />
           <ul>
             {categories.items.map((item) => (
-              <li key={item.name} className="py-1 sm:py-2">
+              <li key={item.name} className="py-1 sm:py-2 text-gray-900">
                 {item.name}
                 <p className="text-sm text-gray-700">{item.info}</p>
               </li>

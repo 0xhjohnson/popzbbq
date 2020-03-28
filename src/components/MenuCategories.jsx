@@ -18,15 +18,24 @@ const MenuCategories = ({ selected, handleChange }) => {
   const categories = data.site.siteMetadata.menuCategories;
 
   return (
-    <ul className="flex py-2 items-center justify-between sm:justify-center">
+    <ul className="flex mb-3 items-center justify-between sm:justify-center">
       {categories.map((category) => (
         <li key={category.name} className="px-0 sm:px-1 md:px-2 lg:px-3">
           <button
             type="button"
-            className={classNames('btn', {
-              'border-gray-700': category.name === selected,
-              'border-transparent': category.name !== selected
-            })}
+            className={classNames(
+              'btn',
+              'text-gray-900',
+              'hover:border-gray-600',
+              'hover:text-gray-600',
+              'transition',
+              'duration-150',
+              'ease-in-out',
+              {
+                'border-gray-900': category.name === selected,
+                'border-transparent': category.name !== selected
+              }
+            )}
             onClick={handleChange}
           >
             {category.name}
