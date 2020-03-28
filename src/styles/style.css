@@ -37,8 +37,11 @@
 .form-input:focus {
   @apply outline-none shadow-outline;
 }
+.nav-link {
+  @apply block px-3 py-2 rounded-md font-medium text-gray-300 text-sm transition duration-150 ease-in-out;
+}
 .nav-active {
-  @apply bg-gray-900 text-white;
+  @apply bg-gray-900 text-white !important;
 }
 
 /**

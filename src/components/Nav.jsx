@@ -74,13 +74,21 @@ const Nav = ({ menuLinks }) => {
         </div>
         {/* full size menu for devices except phones */}
         <nav className="hidden sm:block">
-          <ul className="flex items-center py-2">
-            {menuLinks.map((link) => (
-              <li key={link.name} className="ml-8">
+          <ul className="flex items-center py-2 ml-6">
+            {menuLinks.map((link, idx) => (
+              <li key={link.name}>
                 <Link
                   to={link.link}
-                  className="block text-gray-400 transition duration-150 hover:text-gray-200"
-                  activeStyle={{ color: 'white' }}
+                  activeClassName="nav-active"
+                  className={classNames(
+                    'nav-link',
+                    'hover:text-white',
+                    'hover:bg-gray-700',
+                    'focus:outline-none',
+                    'focus:text-white',
+                    'focus:bg-gray-700',
+                    { 'ml-4': idx > 0 }
+                  )}
                 >
                   {link.name}
                 </Link>
@@ -98,20 +106,12 @@ const Nav = ({ menuLinks }) => {
                 to={link.link}
                 activeClassName="nav-active"
                 className={classNames(
-                  'block',
-                  'px-3',
-                  'py-2',
-                  'rounded-md',
-                  'font-medium',
-                  'text-gray-300',
+                  'nav-link',
                   'hover:text-white',
                   'hover:bg-gray-700',
                   'focus:outline-none',
                   'focus:text-white',
                   'focus:bg-gray-700',
-                  'transition',
-                  'duration-150',
-                  'ease-in-out',
                   { 'mt-1': idx > 0 }
                 )}
               >
