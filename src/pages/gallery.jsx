@@ -47,7 +47,7 @@ const Gallery = () => {
             key={node.id}
             fluid={node.childImageSharp.fluid}
             alt={filenameToTitle(node.childImageSharp.fluid.originalName)}
-            className="rounded-md"
+            className="rounded-md shadow-md"
           />
         ))}
       </div>
