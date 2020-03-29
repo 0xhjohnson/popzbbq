@@ -31,7 +31,7 @@ const Footer = ({ menuLinks }) => {
                 alt="Pop'z BBQ logo footer"
               />
             </div>
-            <p className="text-gray-400 text-sm mb-6">
+            <p className="text-gray-400 text-sm mb-6 max-w-sm">
               Providing cooked to order South Georgia style BBQ that is bad to
               the bone.
             </p>

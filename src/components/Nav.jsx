@@ -82,6 +82,7 @@ const Nav = ({ menuLinks }) => {
                   activeClassName="nav-active"
                   className={classNames(
                     'nav-link',
+                    'text-sm',
                     'hover:text-white',
                     'hover:bg-gray-700',
                     'focus:outline-none',
