@@ -20,12 +20,19 @@
   @apply font-medium py-2 px-4 border border-transparent text-sm leading-5 rounded-md;
 }
 .btn-orange {
-  @apply bg-orange-400 text-orange-900 transition duration-150 ease-in-out;
+  @apply bg-orange-700 text-white transition duration-150 ease-in-out;
 }
 .btn-orange:hover {
-  @apply bg-orange-300;
+  @apply bg-orange-600;
 }
-.btn-orange:focus {
+.btn-orange-alt {
+  @apply bg-orange-300 text-orange-800 transition duration-150 ease-in-out;
+}
+.btn-orange-alt:hover {
+  @apply bg-orange-200;
+}
+.btn-orange:focus,
+.btn-orange-alt:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(164, 202, 254, 0.45);
 }

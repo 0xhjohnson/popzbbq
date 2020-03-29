@@ -15,7 +15,12 @@ const HeroImage = () => {
     }
   `);
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
+  return (
+    <Img
+      fluid={data.placeholderImage.childImageSharp.fluid}
+      className="w-full h-full"
+    />
+  );
 };
 
 export default HeroImage;
