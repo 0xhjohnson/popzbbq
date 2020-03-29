@@ -48,6 +48,7 @@ const Nav = ({ menuLinks }) => {
             type="button"
             className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
             onClick={() => setIsOpen(!isOpen)}
+            aria-expanded={isOpen}
           >
             <svg
               className="h-6 w-6"
