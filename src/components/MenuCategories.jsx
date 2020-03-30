@@ -25,6 +25,7 @@ const MenuCategories = ({ selected, handleChange }) => {
             type="button"
             className={classNames(
               'btn',
+              'menu-categories',
               'mx-0',
               'sm:mx-4',
               'text-gray-900',

@@ -1,11 +1,13 @@
 {
   "name": "popzbbq",
   "private": true,
-  "description": "Static site for popzbbq built with Gatsby",
-  "version": "0.1.0",
+  "description": "Site for popzbbq built with Gatsby and tailwindcss",
+  "version": "1.0.0",
   "author": "0xhjohnson <0xhjohnson@protonmail.com>",
   "dependencies": {
+    "axios": "^0.19.2",
     "classnames": "^2.2.6",
+    "dayjs": "^1.8.23",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
@@ -24,7 +26,6 @@
     "react-hook-form": "^4.9.3",
     "react-icons": "^3.9.0",
     "typeface-inter": "^3.12.0",
-    "uuid": "^7.0.2",
     "yup": "^0.28.1"
   },
   "devDependencies": {
@@ -42,7 +43,8 @@
     "tailwindcss": "^1.2.0"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "tailwindcss"
   ],
   "license": "UNLICENSED",
   "scripts": {

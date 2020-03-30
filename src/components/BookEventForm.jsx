@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import { useForm, ErrorMessage } from 'react-hook-form';
-import { object, string, date } from 'yup';
+import { object, string, date, boolean } from 'yup';
 import classNames from 'classnames';
+import axios from 'axios';
+import dayjs from 'dayjs';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -19,7 +21,8 @@ const bookEventSchema = object().shape({
       message: `Phone number doesn't appear to be valid.`
     }),
   eventDate: date(),
-  details: string().required('Details is a required field.')
+  details: string().required('Details is a required field.'),
+  honeypot: boolean()
 });
 
 const BookEventForm = () => {
@@ -31,7 +34,20 @@ const BookEventForm = () => {
     }
   });
   const eventDate = watch('eventDate');
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (d) => {
+    const data = d;
+
+    // use a honeypot to prevent bot submissions
+    if (data.honeypot) return;
+
+    data.eventDate = dayjs(data.eventDate).format('MMM D h:mm a');
+    try {
+      const res = await axios.post('/api/send', data);
+      console.log(res);
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   useEffect(() => {
     register({ name: 'eventDate' });
@@ -57,7 +73,6 @@ const BookEventForm = () => {
         >
           Name
           <input
-            id="name"
             name="name"
             className={classNames(inputClasses, {
               'border-red-700': errors.name
@@ -74,7 +89,6 @@ const BookEventForm = () => {
         >
           Email
           <input
-            id="email"
             name="email"
             className={classNames(inputClasses, {
               'border-red-700': errors.email
@@ -91,7 +105,6 @@ const BookEventForm = () => {
         >
           Phone
           <input
-            id="phone"
             name="phone"
             className={classNames(inputClasses, {
               'border-red-700': errors.phone
@@ -118,7 +131,6 @@ const BookEventForm = () => {
           dateFormat="MMM d yyyy h:mm aa"
           customInput={
             <input
-              id="eventDate"
               name="eventDate"
               className={classNames(inputClasses, {
                 'border-red-700': errors.eventDate
@@ -139,7 +151,6 @@ const BookEventForm = () => {
         >
           Details
           <textarea
-            id="details"
             name="details"
             className={classNames(inputClasses, {
               'border-red-700': errors.details
@@ -151,6 +162,12 @@ const BookEventForm = () => {
         <ErrorMessage errors={errors} name="details">
           {({ message }) => <p className="text-red-700 text-sm">{message}</p>}
         </ErrorMessage>
+        <input
+          type="checkbox"
+          name="honeypot"
+          className="hidden"
+          ref={register}
+        />
         <div className="flex justify-end">
           <button type="submit" className="btn btn-orange mt-6">
             Submit

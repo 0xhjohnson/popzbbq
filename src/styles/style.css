@@ -32,7 +32,8 @@
   @apply bg-orange-200;
 }
 .btn-orange:focus,
-.btn-orange-alt:focus {
+.btn-orange-alt:focus,
+.menu-categories:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(164, 202, 254, 0.45);
 }
