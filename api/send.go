@@ -43,7 +43,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	msg := "From: " + from + "\r\n" +
 		"To: " + to + "\r\n" +
 		"Subject: Website book event submission\r\n" +
-		m.Name + "would like to book an event on" + m.EventDate + "\r\n" +
+		"\r\n" +
+		m.Name + " would like to book an event on " + m.EventDate + "\r\n" +
 		"Details are listed below\r\n" +
 		"Email: " + m.Email + "\r\n" +
 		"Phone number: " + m.Phone + "\r\n" +
