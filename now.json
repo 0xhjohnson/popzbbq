@@ -1,0 +1,7 @@
+{
+  "env": {
+    "EMAIL_FROM": "@popz-email-from",
+    "EMAIL_TO": "@popz-email-to",
+    "EMAIL_PASS": "@popz-email-pass"
+  }
+}
