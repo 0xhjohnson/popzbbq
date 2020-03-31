@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Pop'z BBQ & Catering - Bad to the Bone`,
+    siteUrl: 'https://popzbbq.com',
     description: `Providing cooked to order South Georgia style BBQ that is bad to the bone. Developing a reputation for some of the best South Georgia style BBQ in the Fort Myers area.`,
     author: `@0xhjohnson`,
     menuLinks: [
@@ -195,6 +196,13 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-113460437-3`
+      }
+    },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
