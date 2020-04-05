@@ -22,6 +22,10 @@ type smtpServer struct {
 	port string
 }
 
+type response struct {
+	Message string
+}
+
 func (s *smtpServer) Address() string {
 	return s.host + ":" + s.port
 }
@@ -33,7 +37,9 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	err := decoder.Decode(&m)
 
 	if err != nil {
-		panic(err)
+		log.Printf("message decoding error: %s", err)
+		w.Write([]byte("Failed"))
+		return
 	}
 
 	from := os.Getenv("EMAIL_FROM")
@@ -42,6 +48,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	msg := "From: " + from + "\r\n" +
 		"To: " + to + "\r\n" +
+		"Reply-To: " + m.Email + "\r\n" +
 		"Subject: Website book event submission\r\n" +
 		"\r\n" +
 		m.Name + " would like to book an event on " + m.EventDate + "\r\n" +
@@ -56,8 +63,11 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		log.Printf("smtp error: %s", err)
+		w.Write([]byte("Failed"))
 		return
 	}
 
 	fmt.Println("Email sent")
+
+	w.Write([]byte("Success"))
 }
