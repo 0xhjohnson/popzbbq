@@ -28,8 +28,8 @@ const Hero = () => {
               </h2>
               <p className="mt-3 text-base text-gray-700 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 We provide South Georgia style BBQ that people love, day after
-                day after day. It is not a big secret. People just want more of
-                it.
+                day, event after event. It is not a big secret. People just want
+                more of it.
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
