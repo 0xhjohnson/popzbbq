@@ -31,7 +31,7 @@ function Banner() {
     >
       <button
         type="button"
-        className="flex items-center justify-between rounded-lg shadow-lg pl-6 pr-4 py-3 bg-gray-900 sm:hidden"
+        className="flex w-full items-center justify-between rounded-lg shadow-lg pl-6 pr-4 py-3 bg-gray-900 sm:hidden"
         onClick={redirectToCheckout}
       >
         <p className="text-gray-100 font-medium">Order Family Weekend Pack</p>
