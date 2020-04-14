@@ -5,6 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import BookEventForm from '../components/BookEventForm';
+import Banner from '../components/Banner';
 
 const BookEvent = () => {
   return (
@@ -21,6 +22,7 @@ const BookEvent = () => {
           <BookEventForm />
         </div>
       </div>
+      <Banner />
     </Layout>
   );
 };

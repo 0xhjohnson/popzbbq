@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import Banner from '../components/Banner';
 
 const Gallery = () => {
   const { allFile } = useStaticQuery(graphql`
@@ -51,6 +52,7 @@ const Gallery = () => {
           />
         ))}
       </div>
+      <Banner />
     </Layout>
   );
 };

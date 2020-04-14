@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "0xhjohnson <0xhjohnson@protonmail.com>",
   "dependencies": {
+    "@stripe/stripe-js": "^1.3.2",
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "dayjs": "^1.8.23",
@@ -27,6 +28,7 @@
     "react-helmet": "^5.2.1",
     "react-hook-form": "^4.9.3",
     "react-icons": "^3.9.0",
+    "react-spring": "^8.0.27",
     "typeface-inter": "^3.12.0",
     "yup": "^0.28.1"
   },

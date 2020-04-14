@@ -22,10 +22,6 @@ type smtpServer struct {
 	port string
 }
 
-type response struct {
-	Message string
-}
-
 func (s *smtpServer) Address() string {
 	return s.host + ":" + s.port
 }

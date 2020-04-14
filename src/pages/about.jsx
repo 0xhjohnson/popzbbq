@@ -2,6 +2,7 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import Banner from '../components/Banner';
 
 const About = () => (
   <Layout title="About">
@@ -26,6 +27,7 @@ const About = () => (
         is my grandfather&apos;s recipe, passed down generations.
       </p>
     </div>
+    <Banner />
   </Layout>
 );
 
