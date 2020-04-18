@@ -27,7 +27,7 @@ function Banner() {
   return (
     <animated.div
       style={props}
-      className="z-50 fixed bottom-0 inset-x-0 px-2 pb-10 sm:px-0 sm:pb-6 hidden"
+      className="z-50 fixed bottom-0 inset-x-0 px-2 pb-10 sm:px-0 sm:pb-6"
     >
       <button
         type="button"
