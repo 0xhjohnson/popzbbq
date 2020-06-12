@@ -27,7 +27,6 @@ const About = () => (
         is my grandfather&apos;s recipe, passed down generations.
       </p>
     </div>
-    <Banner />
   </Layout>
 );
 
