@@ -58,7 +58,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		from, []string{to}, []byte(msg))
 
 	if err != nil {
-		log.Printf("smtp error: %s", err)
+		fmt.Println(err)
 		w.Write([]byte("Failed"))
 		return
 	}
